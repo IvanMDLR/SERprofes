@@ -1,0 +1,135 @@
+
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+}
+
+/* 🌄 FONDO PRINCIPAL */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: url("https://thumbs.dreamstime.com/b/gente-trabajando-en-la-oficina-moderna-vista-interior-de-sala-oficinas-con-diversas-personas-los-ordenadores-el-163526321.jpg");
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+    position: relative;
+}
+
+/* 🌫️ BLUR DE FONDO (nivel equilibrado) */
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: inherit;
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(22px);
+    transform: scale(1.12);
+    z-index: 0;
+}
+
+/* ⚪ OVERLAY NEUTRO (sin tono azul) */
+body::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(255, 255, 255, 0.10);
+    z-index: 1;
+}
+
+/* 🧊 TARJETA LIQUID GLASS */
+.form-container {
+    position: relative;
+    z-index: 2;
+
+    width: 420px;
+    padding: 40px;
+    border-radius: 24px;
+
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+
+    text-align: center;
+    color: white;
+}
+
+/* TEXTO */
+h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+    opacity: 0.7;
+}
+
+/* INPUTS */
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+
+    background: rgba(255,255,255,0.06);
+    color: white;
+
+    outline: none;
+    transition: 0.2s;
+}
+
+/* focus estilo iOS */
+input:focus {
+    border-color: rgba(0, 200, 255, 0.7);
+    box-shadow: 0 0 12px rgba(0,200,255,0.2);
+}
+
+/* 💧 BOTÓN GLASS */
+.btn-enviar {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.2);
+
+    background: rgba(255,255,255,0.08);
+    color: white;
+
+    cursor: pointer;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+/* hover */
+.btn-enviar:hover {
+    transform: scale(1.03);
+    background: rgba(255,255,255,0.15);
+}
