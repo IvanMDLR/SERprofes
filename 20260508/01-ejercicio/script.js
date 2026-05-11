@@ -31,9 +31,11 @@ function comprobarNumero() {
     // **PISTAS**
     if(intento < numeroSecreto) {
         etiqueta.textContent =
-        "¡Fallo! El numero es MAYOR ⬆";
+        "¡Fallo! El número es MAYOR ⬆";
     } else {
-        
+        etiqueta.textContent =
+        "¡FALLO! El número es MENOR ⬇"
     }
+    etiqueta.style.color = "orange";
 
 }
