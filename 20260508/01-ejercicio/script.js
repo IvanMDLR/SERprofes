@@ -37,5 +37,12 @@ function comprobarNumero() {
         "¡FALLO! El número es MENOR ⬇"
     }
     etiqueta.style.color = "orange";
-
+    // GAME OVER
+    if(vidas === 0) {
+        etiqueta.textContent = 
+            "💀 GAME OVER. El número era " + numeroSecreto;
+        etiqueta.style.color = "red";
+        //Desactivar el botón
+        document.getElementById('btn-jugar').disabled = true;
+    }
 }
